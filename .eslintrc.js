@@ -35,7 +35,7 @@ module.exports = {
     ],
     'no-trailing-spaces': 'error',
     'object-curly-spacing': [
-      'error', 'always'
+      'warn', 'always'
     ],
     'arrow-spacing': [
       'error', { 'before': true, 'after': true }
