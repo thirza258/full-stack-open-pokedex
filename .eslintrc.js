@@ -19,6 +19,7 @@ module.exports = {
     'react', 'jest'
   ],
   'rules': {
+    'no-undef': 'warn',
     'indent': ['error', 2],
     'linebreak-style': [
       'error',
@@ -39,6 +40,7 @@ module.exports = {
     'arrow-spacing': [
       'error', { 'before': true, 'after': true }
     ],
-    'no-console': 'error'
+    'no-console': 'error',
+    'react/prop-types': 0
   }
 }
