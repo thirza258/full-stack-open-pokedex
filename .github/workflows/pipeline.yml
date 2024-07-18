@@ -24,6 +24,12 @@ jobs:
         run: npm run build
       - name: Test
         run: npm test
+      - name: Discord Webhook Notify
+        uses: rjstone/discord-webhook-notify@v1.0.4
+        with:
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          details: 'Deployment pipeline completed successfully'
+          color: '16711680'
       - name: Deploy
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '#skip') }}
         run: npm run deploy
